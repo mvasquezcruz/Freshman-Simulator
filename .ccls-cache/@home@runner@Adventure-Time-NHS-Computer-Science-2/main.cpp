@@ -87,7 +87,7 @@ cout << "DAY 7 \n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
   
 
-cout << "Congratulations! You made it through your first week of high school! It will only get harder from here. But try to think positive! Think of all the good things you experienced this week... \nOk yeah there was nothing good but beyond the point. I think if you survived this first week you're definetly not ready to survive the next 35 weeks. Welcome to hell on earth. \n"; 
+cout << "Congratulations! You made it through your first week of high school! It will only get harder from here. But try to think positive! Think of all the good things you experienced this week... \nOk, yeah there was nothing good but beyond the point. I think if you survived this first week you're definetly not ready to survive the next 35 weeks. Welcome to hell on earth. \n"; 
 
     cout << "\n";
 
