@@ -819,6 +819,7 @@ cout << "\n2:00pm | You're in History class and they ask you to get in groups of
   
   }
 
+cout << "\n";
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
      cin.ignore(numeric_limits<streamsize>::max(),'\n');
@@ -837,12 +838,18 @@ else {
 }
 
 cout << "\n"; 
-//end of day 1
+//end of day 4
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n'); 
 
 //Day 5
 cout << "DAY 5 | Friday\n"; 
+
+cout << "\n7:00am | Good Morning! TGIF am I right?\nWhat will you wear to school?\n";
+  //choices for scenario 11
+  cout << "\n[1]Hot Cheeto Girl\n[2]Queer Jock\n[3]Girl from Math Class\n[4]Work solo\n";
+    cin >> scenario12; 
+
 
 //// confession under the sakura tree depending on who you bond with on scenario 11
 
