@@ -49,7 +49,7 @@ cout << "Hello! Welcome to Freshman Simulator!\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 // Day 1
-cout << "DAY 1 \n"; 
+cout << "DAY 1 | Monday\n"; 
 // Scenario 1
   cout << "\n8:30am | It's your first day of highschool! As always you were meant to read your independent reading book over the summer... you remembered didn't you?...you didn't.\nWell, what the hell you going to do? There's a quiz about the book next block!\n";
   //choices for scenario 1
@@ -67,7 +67,7 @@ if (scenario1==1){
 
 }
 else if (scenario1==2){
-  cout << "\nYour friend also didn't read the  book. You're both fucked. At least you guessed and got a 20% on the quiz.\n";
+  cout << "\nYour friend also didn't read the book. You're both fucked. At least you guessed and got a 20% on the quiz.\n";
 
   grades -= 20; 
 
@@ -194,8 +194,9 @@ else if (scenario3==1){
 
     popularity -= 10; 
     romance -=10;
+    grades -= 5; 
 
-     cout << "\nPopularity -10\nRomance -10\n";
+     cout << "\nPopularity -10\nGrades -5\nRomance -10\n";
 
   cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
 }
@@ -246,7 +247,7 @@ cout << "\n";
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
-cout << "DAY 2 \n";
+cout << "DAY 2 | Tuesday\n";
 // Day 2 
 // Scenario 4
  cout << "\n9:20am | I told you to wake up early! Now look, you're super late to school.\nWhat are you going to do?\n";
@@ -476,7 +477,7 @@ cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 //Day 3
-cout << "DAY 3 \n"; 
+cout << "DAY 3  | Wednesday\n"; 
   //scenario7 
   cout << "\n11:30am | You walk into lunch and see some of your fellow freshman friends walking out to get lunch with some seniors. They ask you to come.\nBe careful if you get caught you might get suspended.\n";
   //choices for scenario 7
@@ -508,13 +509,13 @@ cout << "DAY 3 \n";
   cin >> scenario8; 
 
   if(scenario8==1){
-  cout << "choice one\n";
+  cout << "You tell him 'No thanks my guy.'\n";
   }
   else if(scenario8==2){
-  cout << "choice two\n";
+  cout << "You tell him 'Drugs! Ay, give me some and I'll pay you later.'\n";
   } 
   else {
-  cout << "choice three\n";
+  cout << "You tell him 'Drugs are bad! That's why your toes musty.\n";
   }
 
   cout << "\nThe crackhead did not like that. He comes out of his corner and prepares to fight you.\nHighschooler vs Crackhead...FIGHT!\n";
@@ -646,9 +647,10 @@ cout << "Press Enter to Continue\n";
 /////////////////////////////////////////don't fuck with this code pls
 
 //Day 4
-cout << "DAY 4 \n"; 
+cout << "DAY 4 | Thrusday\n"; 
  //scenario 9 
- cout << "\n10:15am | As you walk to your next class you see a kid being bullied in the hallway?\nWhat will you do?\n";
+ cout << "\n10:15am | As you walk to your next class you see a kid being bullied in the hallway?\nWhat will you do?\n"; 
+  
   //choices for scenario 9
   cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
 
@@ -656,29 +658,60 @@ cout << "DAY 4 \n";
 
 if(scenario9==1){
 
-    cout << "\n";
-    money -= 20; 
-    health -= 10;  
+    cout << "You decided to get to class, it's not your problem anyways. So mean of you, poor kid.\n";
 
-    cout << "\nMoney -20\nMental Health -10\n";
+    popularity -= 10;  
+
+    cout << "\nPopularity -10\n";
 
   cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
 }
-else if(scenario9==2){
-
-}
 else if(scenario9==2 && popularity <= 60){
 
+ cout << "You decided to intervene, but who the fuck do you think you are? The bullies decide to gang up on you as well. They steal your lunch money. Next time I say just don't get involved.\n";
+    
+    health -= 10;  
+    popularity -= 10;
+    money -= 20;
+
+    cout << "\nHealth -10\nPopularity -10\nMoney -20\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
 }
 else if(scenario9==2 && popularity >=80){
+
+  cout << "You decided to intervene. You go into a philosophical speech on why bullying is bad. Moved by your words, they decided to change their lives for the good and vow to commit themselves to helping out others. You're so moving.\n";
+    
+    popularity += 10; 
+
+    cout << "\nPopularity +10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
 
 }
 else if(scenario9==3){
 
+  cout << "You join in bullying the kid. You call the kid 'fartface' but even the bullies thought that was too harsh.\n";
+    
+    popularity -= 10; 
+    grades -= 15; 
+
+    cout << "\nPopularity -10\nGrades -15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
 }
 else if(scenario9==3 && popularity >= 80){
 
-}
+cout << "You join in bullying the kid. You make fun his pokemon card collection, you know true cool kidz use yu-gi-oh cards. The kid goes and cries about his loser life. Like he should.\n";
+    
+    popularity += 5; 
+
+    cout << "\nPopularity +5\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+} 
     cout << "\n";
 
   cout << "Press Enter to Continue\n";
@@ -686,54 +719,130 @@ else if(scenario9==3 && popularity >= 80){
      cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 ///scenario 10 
-cout << "\n12:50pm | the fitness gram pacer tasts.....";
+cout << "\n12:50pm | You're in gym class. The teacher tells you today you'll be doing the fitness gram paacer test.\nThe FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal.[beep]. A single lap should be completed each time you hear this sound. [ding]. Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start!\nWhat will you do?\n";
   //choices for scenario 10
-  cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
+  cout << "\n[1]Go try hard and beat everyone\n[2]Get enough to pass the fitness zone\n[3]Not even try\n";
 
     cin >> scenario10; 
 
-
   if (scenario10==1){
-    cout << "\n";
-    money -= 20; 
-    health -= 10;  
+    cout << "You decide to go try hard mode and go as far as you can go. At the 80th lap, it's you vs. the basketball kid. To gain bragging rights, you push above your limits and manage to beat him. But now you're exhausted. Good luck getting up the stairs to your next class.\n";
 
-    cout << "\nMoney -20\nMental Health -10\n";
+    popularity += 5;
+    health += 10; 
+    strength -= 30;  
 
-  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
+    cout << "\nPopularity +5\nHealth +10\nStrength -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
   }
 
+  if (scenario10==2){
+    cout << "You managed to run 15 laps of the pacer test. Exhausted you went and sat down. You were the first kid out. How weak.\n";
+
+    popularity -=15;
+    grades += 10; 
+    health += 5;  
+
+    cout << "\nPopularity -15\nGrades +10\nHealth +5\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  } 
+
+  if (scenario10==3){
+    cout << "You walk over to your P.E teacher. You make a deal with him that you'd hook him up with the history teacher if he makes you not run the pacer test. He agrees but also demmands 10 bucks. A teachers wage is very low. Gotta fund your educators.\n";
+
+    money -= 10; 
+    grades += 10;  
+
+    cout << "\nMoney -10\nGrades +10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  }
+
+cout << "\n";
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
      cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
 ///scenario 11
-cout << "\n2:00pm | You're in English class and they ask you to get in groups of two to do a project?\nWho will you partner up with?\n";
+cout << "\n2:00pm | You're in History class and they ask you to get in groups of two to do a project on WWII.\nWho will you partner up with?\n";
   //choices for scenario 11
-  cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
+  cout << "\n[1]Hot Cheeto Girl\n[2]Queer Jock\n[3]Girl from Math Class\n[4]Work solo\n";
 
     cin >> scenario11; 
 
-
   if (scenario11==1){
-    cout << "\n";
-    money -= 20; 
-    health -= 10;  
+    cout << "You choose to work with the Hot Cheeto Girl. While not very smart, she's acutally very artistic. While your project is not that great at least it's the best looking of them all.\n";
 
-    cout << "\nMoney -20\nMental Health -10\n";
+    grades += 10; 
+    romance += 15;  
 
-  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
+    cout << "\nGrades +10\nRomance +15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  
+  }
+  else  if (scenario11==2){
+    cout << "You choose to work with the Queer Jock. He touches your thighs under the desks as eh look at you intently. It's very hard to concentrate when you're being harrassed. In the end, you ended up having to do the project yourself.\n";
+
+    grades -= 10; 
+    romance += 15;  
+
+    cout << "\nGrades -10\nRomance +15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  
+  }
+  else  if (scenario11==3){
+    cout << "You choose to work with the girl from math class. While doing research about your project, the girl rants on how bad Hitler was protraied in the media and how his caused could have helped better the world. I think she's a neo-Nazi...I think you should run.\n";
+
+    health -= 10;
+    popularity -= 20; 
+    grades -= 5; 
+    romance += 15;  
+
+    cout << "\nMental Health -10\nPopularity -20\nGrades -5\nRomance +15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  
+  }
+  else if (scenario11==4){
+    cout << "You choose to work solo. Mrs.Texas decides you help you out with the project. Her boobs are a bit distracting though. You managed to half ass the project and get a passing 70%.\n";
+
+    grades += 5; 
+    romance += 15;  
+
+    cout << "\nGrades +5\nRomance +15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  
   }
 
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
      cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
+//alternate ending check
+if(popularity<=20){ 
+cout << "High school is tough. Specially when you're not popular. You got bullied out of freshman year. Good luck with the social anxiety for the rest of your life.\nYou've failed\n"; 
+return 0; 
+} 
+else if(grades<=30){
+cout << "Omg how the fuck are your grades that bad. You've now failed freshman year. Imagine having to repeat this hell of a year. AGAIN. Smh\nYou've failed\n";
+return 0; 
+} 
+else { 
+  cout << "Well it's almost the end of the week. Friday's are always fun.\n";
+}
 
+cout << "\n"; 
+//end of day 1
+cout << "Press Enter to Continue\n";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n'); 
 
 //Day 5
-cout << "DAY 5 \n"; 
-
+cout << "DAY 5 | Friday\n"; 
 
 //// confession under the sakura tree depending on who you bond with on scenario 11
 
@@ -745,12 +854,12 @@ cout << "DAY 5 \n";
 
 
 // End of the week, End of game
-cout << "Congratulations! You made it through your first week of high school! It will only get harder from here. But try to think positive! Think of all the good things you experienced this week... \nOk, yeah there was nothing good but beyond the point. I think if you survived this first week you're definetly not ready to survive the next 35 weeks. Welcome to hell on earth. \n"; 
+cout << "Congratulations! You made it through your first week of high school! It will only get harder from here. But try to think positive! Think of all the good things you experienced this week... \nOk, yeah nothing was exactly great but beyond the point. I think if you survived this first week you're definetly not ready to survive the next 35 weeks. Welcome to hell on earth. \n"; 
 
     cout << "\n";
 
 cout << "End of Week One \n";
 
-cout << "To Be Continued\n";
+cout << "To Be Continued...\n";
 
 }
