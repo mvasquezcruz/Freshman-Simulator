@@ -100,11 +100,11 @@ cout << "\n11:20am | Finally, it's lunch time. You decide that this year you'll 
 if (scenario2==1){ 
   cout << "\nYou go and sit down with the jocks, they find you weird but decided to keep you as the friend they can bully. It's not ideal but maybe this way you'll be popular. One of them hands you a condom and winks at you. You're not sure if he was flirting with you but you take it anyways.\nYou have gained: 'A condom'\n";
    
-    popularity -= 5; 
+    popularity += 5; 
     string a2 = "A condom"; 
     inventory.push_back(a2); 
 
-    cout << "\nPopularity -5\n";
+    cout << "\nPopularity +5\n";
 
     for(int i=0; i < inventory.size(); i++)
     cout << "\nInventory: " << inventory[i] << ' ';
@@ -483,6 +483,8 @@ cout << "DAY 3 \n";
   cout << "\n[1]Fuck it join them\n[2]Stay and be a good kid\n";
   cin >> scenario7;
 
+///////////////////////////FIGHT  SCENCE//////////////////////////////////
+
   if(scenario7==1) { 
   cout << "Badass. They're headed to 7/11 to get some slurpees. You get a brainfreeze as you slurped the slurpee too slurply.\n"; 
   
@@ -497,21 +499,122 @@ cout << "DAY 3 \n";
   /// end of scenario 7
   cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+     cin.ignore(numeric_limits<streamsize>::max(),'\n');
      
     //scenario8 
   cout << "\n11:40pm | As you exit the 7/11 with your fellow freshman and senior pals, the crackhead around the corner wishpers: 'psst~ want some drugs?'\n He's very creepy. What should you do?\n";
   //choices for scenario 8
   cout << "\n[1]Deny his offer\n[2]Accept his offer\n[3]Teach him about the harmful effects of drugs.\n";
   cin >> scenario8; 
-  
+
+  if(scenario8==1){
+  cout << "choice one\n";
+  }
+  else if(scenario8==2){
+  cout << "choice two\n";
+  } 
+  else {
+  cout << "choice three\n";
   }
 
-  else {
+  cout << "\nThe crackhead did not like that. He comes out of his corner and prepares to fight you.\nHighschooler vs Crackhead...FIGHT!\n";
+
+  int playerhealth = health; 
+  int crackhealth = 50; 
+  int attackchoice; 
+
+  while(true){ 
+
+  cout << "\nYour turn: \n";
+  cout << "\n";
+  //choices for scenario 8.5
+  cout << "Player Health: " << playerhealth << "\n"; 
+  cout << "Crackhead Health: " << crackhealth << "\n";
+   
+  cout << "\n";
+
+  cout << "\n[1]Punch\n[2]Insult\n[3]Defend\n[4]Use inventory item\n";
+
+  cin >> attackchoice; 
+
+  if(attackchoice==1 && playerhealth > 0 && crackhealth > 0){ 
+    cout << "You punched the crackhead. You did 10 damage. He punched you back, he did 15 damage.";
+
+    playerhealth -= 15;
+    crackhealth -= 10;  
+
+    cout << "\n"; 
+  }
+  
+  else if(attackchoice==2 && playerhealth > 0 && crackhealth > 0){ 
+    cout << "\nYou insulted the crackheads hairline. He was very offended. You did 20 damage. He slaped you back. He did 10 damage."; 
+
+    playerhealth -= 10;
+    crackhealth -= 20; 
+    cout << "\n";
+  }
+
+  else if(attackchoice==3 && playerhealth > 0 && crackhealth > 0){
+    cout << "\nYou defend. The crackhead calls you a pussy. You gain 5 health. He lost 5 health."; 
+
+    playerhealth += 5;
+    crackhealth -=5; 
+    cout << "\n";
+  }
+
+  else if(attackchoice==4 && playerhealth > 0 && crackhealth > 0){ 
+  
+  for(int i=0; i < inventory.size(); i++)
+  cout << "\nYou dig into your pockets and pull out... " << inventory[i] << "?... I'm not sure how this was helpful. You throw the " << inventory [i] << " at the crackhead. He gets a little shaken. You did 10 damage. He did 5 damage.";
+
+    playerhealth -= 5;
+    crackhealth -= 10; 
+    cout << "\n";
+  }
+
+   else if((attackchoice == 1 || attackchoice == 2 ||attackchoice == 3 ||attackchoice == 4) && playerhealth<=0){ 
+
+    cout << "\nCrackhead wins! He slaps you and walks away with his crack. I don't think he was going to give you any anyways...\n"; 
+    
+    health -= 50; 
+    popularity -= 20; 
+    cout << "\nHealth -50\nPopularity -20\n";
+
+    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+
+    cout << "\n";
+   /// end of winning battle
+  cout << "Press Enter to Continue\n";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    
+    cout << "The fight against the crackhead made you come back late to school. You were caught skipping school, seems like you're suspended for 2 weeks. Sucks to be you\nYou've failed\n";
+
+    return 0;  
+
+  }
+
+  else if((attackchoice == 1 || attackchoice == 2 ||attackchoice == 3 ||attackchoice == 4) && crackhealth<=0){ 
+    cout << "\nYou win! You're really living it up this highschool year. You get back to school and tell everyone about your fight. You're truly a cool kid now!\n";
+
+    popularity += 50; 
+    cout << "\nPopularity +50\n";
+
+    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+
+     break;
+  }
+
+  }
+
+  } 
+
+///why did you not leave? lame
+  else if(scenario7==2) {
      cout << "This is why you get no bitches. Why are you so lame?\n"; 
+     popularity -= 200;
 
-     popularity -= 50;
-
-      cout << "\nPopularity -50\n";
+      cout << "\nPopularity -200\n";
 
     cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
 
@@ -541,6 +644,9 @@ cout << "\n";
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
+
+/////////////////////////////////////////
+
 //Day 4
 cout << "DAY 4 \n"; 
 
@@ -564,7 +670,8 @@ cout << "Congratulations! You made it through your first week of high school! It
 
     cout << "\n";
 
-cout << "The End \n";
+cout << "End of Week One \n";
 
+cout << "To Be Continued\n";
 
 }
