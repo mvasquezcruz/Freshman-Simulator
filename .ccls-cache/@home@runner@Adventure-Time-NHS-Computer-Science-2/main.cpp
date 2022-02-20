@@ -565,7 +565,7 @@ cout << "DAY 3 \n";
   else if(attackchoice==4 && playerhealth > 0 && crackhealth > 0){ 
   
   for(int i=0; i < inventory.size(); i++)
-  cout << "\nYou dig into your pockets and pull out... " << inventory[i] << "?... I'm not sure how this was helpful. You throw the " << inventory [i] << " at the crackhead. He gets a little shaken. You did 10 damage. He did 5 damage.";
+  cout << "\nYou dig into your pockets and pull out... " << inventory[i] << "?... I'm not sure how this was helpful. Crackehead is now confused. You did 10 damage. He did 5 damage.";
 
     playerhealth -= 5;
     crackhealth -= 10; 
@@ -597,8 +597,8 @@ cout << "DAY 3 \n";
   else if((attackchoice == 1 || attackchoice == 2 ||attackchoice == 3 ||attackchoice == 4) && crackhealth<=0){ 
     cout << "\nYou win! You're really living it up this highschool year. You get back to school and tell everyone about your fight. You're truly a cool kid now!\n";
 
-    popularity += 50; 
-    cout << "\nPopularity +50\n";
+    popularity += 30; 
+    cout << "\nPopularity +30\n";
 
     cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
 
@@ -617,7 +617,6 @@ cout << "DAY 3 \n";
       cout << "\nPopularity -200\n";
 
     cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
-
   }
 
   cout << "\n";
@@ -644,19 +643,99 @@ cout << "\n";
 cout << "Press Enter to Continue\n";
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
-
-/////////////////////////////////////////
+/////////////////////////////////////////don't fuck with this code pls
 
 //Day 4
 cout << "DAY 4 \n"; 
+ //scenario 9 
+ cout << "\n10:15am | As you walk to your next class you see a kid being bullied in the hallway?\nWhat will you do?\n";
+  //choices for scenario 9
+  cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
 
+    cin >> scenario9; 
+
+if(scenario9==1){
+
+    cout << "\n";
+    money -= 20; 
+    health -= 10;  
+
+    cout << "\nMoney -20\nMental Health -10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
+}
+else if(scenario9==2){
+
+}
+else if(scenario9==2 && popularity <= 60){
+
+}
+else if(scenario9==2 && popularity >=80){
+
+}
+else if(scenario9==3){
+
+}
+else if(scenario9==3 && popularity >= 80){
+
+}
     cout << "\n";
 
   cout << "Press Enter to Continue\n";
-
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+///scenario 10 
+cout << "\n12:50pm | the fitness gram pacer tasts.....";
+  //choices for scenario 10
+  cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
+
+    cin >> scenario10; 
+
+
+  if (scenario10==1){
+    cout << "\n";
+    money -= 20; 
+    health -= 10;  
+
+    cout << "\nMoney -20\nMental Health -10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
+  }
+
+cout << "Press Enter to Continue\n";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+///scenario 11
+cout << "\n2:00pm | You're in English class and they ask you to get in groups of two to do a project?\nWho will you partner up with?\n";
+  //choices for scenario 11
+  cout << "\n[1]Get to class\n[2]Intervene\n[3]Join bullying the kid\n";
+
+    cin >> scenario11; 
+
+
+  if (scenario11==1){
+    cout << "\n";
+    money -= 20; 
+    health -= 10;  
+
+    cout << "\nMoney -20\nMental Health -10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";  
+  }
+
+cout << "Press Enter to Continue\n";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+     cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+
+
 //Day 5
 cout << "DAY 5 \n"; 
+
+
+//// confession under the sakura tree depending on who you bond with on scenario 11
 
     cout << "\n";
 
