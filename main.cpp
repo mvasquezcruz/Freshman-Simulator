@@ -35,6 +35,7 @@ int scenario14;
 
 
 vector <string> inventory = {}; 
+
 //Welcome Page
 cout << "Hello! Welcome to Freshman Simulator!\n"; 
 
@@ -51,7 +52,7 @@ cout << "Hello! Welcome to Freshman Simulator!\n";
 // Day 1
 cout << "DAY 1 | Monday\n"; 
 // Scenario 1
-  cout << "\n8:30am | It's your first day of highschool! As always you were meant to read your independent reading book over the summer... you remembered didn't you?...you didn't.\nWell, what the hell you going to do? There's a quiz about the book next block!\n";
+  cout << "\n8:30am | It's your first day of highschool! As always you were meant to read your independent reading book over the summer... you remembered didn't you?...you didn't.\nWell, what the hell are you going to do? There's a quiz about the book next block!\n";
   //choices for scenario 1
   cout << "\n[1]sparknotes the book\n[2]ask your friend for a summary\n[3]try to read the book in the next 30 seconds\n";
     cin >> scenario1;
@@ -312,7 +313,7 @@ else if(scenario4==4) {
      cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
    
-    cout << "\n10:20am | While at home someone knocks the door. You ask who is it because stranger danger. It's a plumber. An oddly hot one, and with very reaveling clothes. Now why is a plumber at your house? You're mom rushes to the door and shoos you away. She say's they have business to do. You know this is your cue to go to your room and go in your room and put on your headphones on full blast. She gives you 60 dollars for you not to tell dad.\n";
+    cout << "\n10:20am | While at home someone knocked  the door. You ask who is it because stranger danger. It's a plumber. An oddly hot one, and with very reaveling clothes. Now why is a plumber at your house? You're mom rushes to the door and shoos you away. She say's they have business to do. You know this is your cue to go to your room and go in your room and put on your headphones on full blast. She gives you 60 dollars for you not to tell dad.\n";
 
     money += 60; 
 
@@ -847,26 +848,133 @@ cout << "DAY 5 | Friday\n";
 
 cout << "\n7:00am | Good Morning! TGIF am I right?\nWhat will you wear to school?\n";
   //choices for scenario 11
-  cout << "\n[1]Hot Cheeto Girl\n[2]Queer Jock\n[3]Girl from Math Class\n[4]Work solo\n";
-    cin >> scenario12; 
+  cout << "\n[1]Sweater & Sweats[2]Suit & Tie\n[3]Athletic Wear\n";
+    cin >> scenario12;  
+  
+  if(scenario12==1){ 
+  cout << "You chose some sweater & sweats. Classic and comfortable, nothing wrong with this choice.\n";
 
+    popularity += 5;   
 
+    cout << "\nPopularity +5\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  }
+  else if(scenario12==2){ 
+  cout << "You chose to wear a suit and tie. As you walk to school a random stranger socks you in the face believing it was his ex-wife's lawyer who had taken away the custody of his kids. Noticing his mistake, he apologizes and gives you 50 bucks to not call the cops.\n50 bucks? done deal.\n";
+
+    grades -= 10;  
+    health -= 20; 
+    money += 50;
+
+    cout << "\nHealth -20\nGrades -10\nMoney +50\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  }
+  else if(scenario12==3){
+    cout << "You chose to wear some athletic wear. You wear some neon Nike 'just do it' shirt with matching neon basketball sweats, the classic middle school athletic wear right?\nWrong, if you wear this type of clothing wth is wrong with you. At least you're dressed up for gym class.\n";
+
+    grades += 5; 
+    popularity -= 15;  
+
+    cout << "\nGrades +5\nPopularity -15\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  }
+
+  cout << "\n";
+
+  cout << "Press Enter to Continue\n";
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
+//Scenario 13
+
+cout << "\n1:00pm | You walk to your locker to put away your binders which you will never use again for the rest of the year but are still somehow a required material. As you open your locker, a note falls out.It says:\nMeet me under the cherry blossom tree at 3:00pm, XOXO Secret Admirer\nWill you go?\n";
+  //choices for scenario 13
+  cout << "\n[1]Yes[2]No\n";
+    cin >> scenario13;  
 //// confession under the sakura tree depending on who you bond with on scenario 11
 
+if(scenario13==1 && scenario2==1 && scenario3==1 && scenario11==3){
+  cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the girl from math class?!\nShe professes her love for you.\nWill you accept her feelings?\n";
+  
+  cout << "\n[1]Yes[2]No\n";
+    cin >> scenario14;  
+
+}
+
+else if(scenario13==1 && scenario2==1 && scenario6==1 &&scenario11==2){
+  cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the queer jock?!\nHe professes his love for you.\nWill you accept his feelings?\n";
+  
+  cout << "\n[1]Yes[2]No\n";
+    cin >> scenario14;  
+
+} 
+
+else if(scenario13==1 && scenario5==1 && scenario11==1){
+  cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the hot cheeto girl?!\nShe professes her love for you.\nWill you accept her feelings?\n";
+  
+  cout << "\n[1]Yes[2]No\n";
+    cin >> scenario14;  
+
+} 
+
+else if(scenario13==1 && scenario6==4 && scenario11==4){
+  cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...Mrs.Texas?!\nShe professes her love for you.\nWill you accept her feelings?\n";
+  
+  cout << "\n[1]Yes[2]No\n";
+    cin >> scenario14;  
+
+} 
+
+else if(scenario13==1){
+  cout << "\n3:00pm | It's three and you wait under the cherry blossom tree... No one shows up. Seems like you were pranked.\n";
+  
+    popularity -= 10;
+    romance -= 30;   
+
+    cout << "\nPopularity -10\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+}
+
+else { 
+  cout << "Damn, you're missing out on a possibly regretable highschool lover...Good luck finding love after this.\n";
+ 
+    popularity -= 20;
+    romance -= 30;   
+
+    cout << "\nPopularity -20\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+}
     cout << "\n";
 
   cout << "Press Enter to Continue\n";
-
+    cin.ignore(numeric_limits<streamsize>::max(),'\n');
     cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
-
+if(popularity<=20){ 
+cout << "High school is tough. Specially when you're not popular. You got bullied out of freshman year. Good luck with the social anxiety for the rest of your life.\nYou've failed\n"; 
+return 0; 
+} 
+else if(grades<=30){
+cout << "Omg how the fuck are your grades that bad. You've now failed freshman year. Imagine having to repeat this hell of a year. AGAIN. Smh\nYou've failed\n";
+return 0; 
+} 
+else { 
 // End of the week, End of game
 cout << "Congratulations! You made it through your first week of high school! It will only get harder from here. But try to think positive! Think of all the good things you experienced this week... \nOk, yeah nothing was exactly great but beyond the point. I think if you survived this first week you're definetly not ready to survive the next 35 weeks. Welcome to hell on earth. \n"; 
 
     cout << "\n";
 
+cout << "Press Enter to Continue\n";
+cin.ignore(numeric_limits<streamsize>::max(),'\n');
+
 cout << "End of Week One \n";
 
 cout << "To Be Continued...\n";
-
+  }
 }
