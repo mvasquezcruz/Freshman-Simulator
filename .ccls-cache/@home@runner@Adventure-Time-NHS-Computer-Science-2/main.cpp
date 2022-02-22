@@ -901,6 +901,27 @@ if(scenario13==1 && scenario2==1 && scenario3==1 && scenario11==3){
   
   cout << "\n[1]Yes[2]No\n";
     cin >> scenario14;  
+  
+  if(scenario14==1){ 
+    cout << "You decided to accept her feelings. Now I'm not sure why you'd date a neo-nazi but do you I guess.\n"; 
+      popularity -= 10;
+      romance += 10;   
+
+    cout << "\nPopularity -10\nRomance +10\n";
+
+    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
+  else{  
+    cout << "You decided to reject her feelings. Embarrassed she walks way. You'll never see her again in math class.\n"; 
+      popularity += 5;
+      romance -= 30;   
+
+    cout << "\nPopularity +5\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
 
 }
 
@@ -908,7 +929,31 @@ else if(scenario13==1 && scenario2==1 && scenario6==1 &&scenario11==2){
   cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the queer jock?!\nHe professes his love for you.\nWill you accept his feelings?\n";
   
   cout << "\n[1]Yes[2]No\n";
-    cin >> scenario14;  
+    cin >> scenario14;
+    
+    if(scenario14==1){ 
+    cout << "You decided to accept his feelings. He jumps with glee and passionately kisses you. You're soon to discover he's a very rich guy. Your love life will be glamourous indeed.\n";
+
+    popularity -= 10;
+    romance += 10;   
+    money += 100; 
+
+    cout << "\nPopularity -10\nRomance +10\nMoney +100\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+    }
+    else{  
+    cout << "You decided to reject his feelings but he's not convinced. He says he will win your heart no matter what it takes...Now that's a bit concerning.\n"; 
+
+    popularity -= 5;
+    romance -= 30;   
+
+    cout << "\nPopularity -5\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
 
 } 
 
@@ -918,6 +963,28 @@ else if(scenario13==1 && scenario5==1 && scenario11==1){
   cout << "\n[1]Yes[2]No\n";
     cin >> scenario14;  
 
+  if(scenario14==1){ 
+    cout << "You decided to accept her feelings. Exicted she grabs you and takes you on a date to chick-fil-a. She's a pretty chill girl, I think you two are pretty fit for each other.\n";
+
+    popularity += 10;
+    romance += 10;   
+
+    cout << "\nPopularity +10\nRomance +10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
+  else{  
+    cout << "You decided to reject her feelings. Embarrassed she walks way, her hands wiping away her tears so the makeup that took her 2 hours to do doesn't go away in 2 minutes. You'll never see her again in chemistry class.\n"; 
+
+    popularity -= 5;
+    romance -= 30;   
+
+    cout << "\nPopularity -5\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
 } 
 
 else if(scenario13==1 && scenario6==4 && scenario11==4){
@@ -925,6 +992,27 @@ else if(scenario13==1 && scenario6==4 && scenario11==4){
   
   cout << "\n[1]Yes[2]No\n";
     cin >> scenario14;  
+
+    if(scenario14==1){ 
+    cout << "You decided to accept her feelings. But sadly your relationship doesn't last long and she's put into jail for child grooming. Bye bye Mrs. Texas.\n"; 
+
+    popularity += 40;
+    romance += 10;   
+
+    cout << "\nPopularity +40\nRomance +10\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+
+  }
+  else{  
+    cout << "You decided to reject her feelings. While she's hot, you know it's the right thing to do. Good job.\n"; 
+    popularity -= 15;
+    romance -= 30;   
+
+    cout << "\nPopularity -15\nRomance -30\n";
+
+  cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n";
+  }
 
 } 
 
