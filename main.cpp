@@ -387,20 +387,10 @@ else if(scenario4==4) {
   cout << "\n[1]Go to the school gym\n[2]Join the gaming club\n[3]Join book club\n[4]Go get some afterschool help\n";
 
   cin >> scenario6; 
+  
+  // glitch??? if one chooses 1 for scenario 2 it doesnt print this out
 
-  if(scenario6==1){ 
-    cout << "You decide to go to the school gym. As you enter, you feel everyone staring at you. Insecure, you go in the corner to go work out. You bicep curl a max of 10 lbs. I can already see the incoming gainz.\n";
-
-      popularity += 5;
-      strength += 5;
-
-      cout << "\nPopularity +5\nStrength +5\n";
-
-    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
-
-  }
-
-  else if(scenario6==1 && scenario2==1){ 
+   if(scenario6==1 && scenario2==1){ 
     cout << "You decide to go to the school gym. As you enter, your fellow jock friends cheer you for entering their 'pumping zone'. Weird as that sounds you join their workout session in where oddly all of them are way too close to each other as they 'assist' them. The guy that gave you the condom before decides to help you with your barbell squat. You manage to get a max of 105 lbs. Pretty good for a beginner. He slaps you in the ass to congratulate you...Is he gay? And did you like that?\n";
 
       strength += 20;
@@ -411,6 +401,29 @@ else if(scenario4==4) {
     cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
 
   }
+
+   else if(scenario6==1){ 
+    cout << "You decide to go to the school gym. As you enter, you feel everyone staring at you. Insecure, you go in the corner to go work out. You bicep curl a max of 10 lbs. I can already see the incoming gainz.\n";
+
+      popularity += 5;
+      strength += 5;
+
+      cout << "\nPopularity +5\nStrength +5\n";
+
+    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+
+  } 
+
+else if(scenario6==2 && scenario2==3){
+    cout << "You decided to try joining the gaming club. The club is comprised of the same nerds which slandered you for your ingnorance on D&D. Annoyed by their loser mentality you stand up for yourself and decide to present them with a true game: Monopoly. You all play a 2hr game in which you win. Seems like you're now truly an alpha male.\n";
+
+      popularity += 5;
+
+      cout << "\nPopularity +5\n";
+
+    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
+  } 
+
   else if(scenario6==2){
     cout << "You decided to try joining the gaming club. They're playing Wii sports and you ask to join. Boxing on the Wii is much more tiring that it looks, after an hour you're soaking wet with sweat. Seems like joining the gaming club was a good choice.   \n";
 
@@ -422,15 +435,6 @@ else if(scenario4==4) {
 
   }
 
-  else if(scenario6==2 && scenario2==3){
-    cout << "You decided to try joining the gaming club. The club is comprised of the same nerds which slandered you for your ingnorance on D&D. Annoyed by their loser mentality you stand up for yourself and decide to present them with a true game: Monopoly. You all play a 2hr game in which you win. Seems like you're now truly an alpha male.\n";
-
-      popularity += 5;
-
-      cout << "\nPopularity +5\n";
-
-    cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
-  }
 
   else if(scenario6==3){ 
     cout << "You decide to join the book club. They invite you to come read their next group book together. Their next book is on Wattpad named 'bakugou x y/n' . Oddly, you find yourself hooked to this book. You've learned much about things that well...aren't PG13.\nDid you know that reading for 30 mins a day can help you be smarter?\n";
@@ -493,7 +497,7 @@ cout << "DAY 3  | Wednesday\n";
   health -= -10;
   popularity += 20;
       
-    cout << "\nHealth -10\nGrades +10\nPopularity +20\n";
+    cout << "\nHealth -10\nPopularity +20\n";
 
     cout << "\nStats:\n \n Health: " << health << "\n Popularity: " << popularity << "\n Grades: " << grades << "\n Strength: " << strength << "\n Money: " << money << "\n Romance: " << romance << "\n"; 
   
@@ -848,7 +852,7 @@ cout << "DAY 5 | Friday\n";
 
 cout << "\n7:00am | Good Morning! TGIF am I right?\nWhat will you wear to school?\n";
   //choices for scenario 11
-  cout << "\n[1]Sweater & Sweats[2]Suit & Tie\n[3]Athletic Wear\n";
+  cout << "\n[1]Sweater & Sweats\n[2]Suit & Tie\n[3]Athletic Wear\n";
     cin >> scenario12;  
   
   if(scenario12==1){ 
@@ -892,14 +896,14 @@ cout << "\n7:00am | Good Morning! TGIF am I right?\nWhat will you wear to school
 
 cout << "\n1:00pm | You walk to your locker to put away your binders which you will never use again for the rest of the year but are still somehow a required material. As you open your locker, a note falls out.It says:\nMeet me under the cherry blossom tree at 3:00pm, XOXO Secret Admirer\nWill you go?\n";
   //choices for scenario 13
-  cout << "\n[1]Yes[2]No\n";
+  cout << "\n[1]Yes\n[2]No\n";
     cin >> scenario13;  
 //// confession under the sakura tree depending on who you bond with on scenario 11
 
 if(scenario13==1 && scenario2==1 && scenario3==1 && scenario11==3){
   cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the girl from math class?!\nShe professes her love for you.\nWill you accept her feelings?\n";
   
-  cout << "\n[1]Yes[2]No\n";
+  cout << "\n[1]Yes\n[2]No\n";
     cin >> scenario14;  
   
   if(scenario14==1){ 
@@ -925,10 +929,10 @@ if(scenario13==1 && scenario2==1 && scenario3==1 && scenario11==3){
 
 }
 
-else if(scenario13==1 && scenario2==1 && scenario6==1 &&scenario11==2){
+else if(scenario13==1 && scenario2==1 && scenario6==1 && scenario11==2){
   cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the queer jock?!\nHe professes his love for you.\nWill you accept his feelings?\n";
   
-  cout << "\n[1]Yes[2]No\n";
+  cout << "\n[1]Yes\n[2]No\n";
     cin >> scenario14;
     
     if(scenario14==1){ 
@@ -960,7 +964,7 @@ else if(scenario13==1 && scenario2==1 && scenario6==1 &&scenario11==2){
 else if(scenario13==1 && scenario5==1 && scenario11==1){
   cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...the hot cheeto girl?!\nShe professes her love for you.\nWill you accept her feelings?\n";
   
-  cout << "\n[1]Yes[2]No\n";
+  cout << "\n[1]Yes\n[2]No\n";
     cin >> scenario14;  
 
   if(scenario14==1){ 
@@ -990,7 +994,7 @@ else if(scenario13==1 && scenario5==1 && scenario11==1){
 else if(scenario13==1 && scenario6==4 && scenario11==4){
   cout << "\n3:00pm | It's three and you wait under the cherry blossom tree. Someone is coming your way...Mrs.Texas?!\nShe professes her love for you.\nWill you accept her feelings?\n";
   
-  cout << "\n[1]Yes[2]No\n";
+  cout << "\n[1]Yes\n[2]No\n";
     cin >> scenario14;  
 
     if(scenario14==1){ 
